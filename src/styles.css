@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Gugi&display=swap');
+
+.navigation{
+    font-family: 'Gugi', cursive;
+}
+
+
+
+body{
+    color:aliceblue;
+    background-color: black;
+}
+
+.hero {
+    position: relative;
+    height: 150vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-image: url('images/night_knight.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .hero {
+        color: whitesmoke;
+        background-image: url('images/night_knight.jpeg');
+        height: 70vh;
+    }
+}
+
