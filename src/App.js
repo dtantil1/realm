@@ -31,16 +31,16 @@ function App() {
 
   return (
     <div className="App">
-      <header>
+      <header><span id="top"></span>
       <Navigation display={handleClick} />
       </header>
         <Container fluid className="text-center hero">
-            <div className="p-4">
+            <div className="p-6">
             <h2>{title}</h2>
             <h4>{info}</h4>
             </div>
         </Container>
-        <Signup />
+        <Signup  />
         <Slides />
     </div>
   );
