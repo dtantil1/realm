@@ -28,7 +28,7 @@ function App() {
             setStory("")
         }
         if(event.target.id ==="lore"){
-            setTitle("History of the Realm")
+            setTitle("Lore")
             setInfo("It was a dark and stormy night...and the warriors from hell were coming")
             setStory("")
         }
