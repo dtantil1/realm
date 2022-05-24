@@ -11,6 +11,7 @@ function Navigation(props){
                         <Nav className="me-auto">
                             <Nav.Link href="#top" id="about" onClick={props.display}>About</Nav.Link>
                             <Nav.Link href="#top" id="lore" onClick={props.display}>Lore</Nav.Link>
+                            <Nav.Link href="#factions" onClick={props.display}>Factions</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link href="#register">Register</Nav.Link>

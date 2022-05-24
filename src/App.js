@@ -3,12 +3,13 @@ import './styles.css'
 import Slides from "./components/Slides";
 import Signup from "./components/Signup";
 import Navigation from "./components/Navigation";
+import Factions from "./components/Factions";
 import {Container} from "react-bootstrap";
 import { useState } from 'react';
 
 function App() {
-    const message = "<p>Level-up yourself and your warrior.<br>Time to <strong>conquer the Realm.</strong></p>"
-    const title_message = "Trainers of the Realm"
+    const message = "<p>Level-up your warrior...and yourself.<br>Time to <strong>conquer the Realm.</strong></p>"
+    const title_message = "<strong>Trainers of the Realm</strong>"
 
     let [title, setTitle] = useState([title_message]);
     let [info, setInfo] = useState([message]);
@@ -31,9 +32,6 @@ function App() {
             setInfo("It was a dark and stormy night...and the warriors from hell were coming")
             setStory("")
         }
-
-
-
     }
 
   return (
@@ -45,11 +43,11 @@ function App() {
             <div className="p-6">
             <h2 className="navigation"><div dangerouslySetInnerHTML={{ __html: title }}></div></h2>
                 <div dangerouslySetInnerHTML={{ __html: info }}></div><p>{story}</p>
-
             </div>
         </Container>
         <Signup  />
         <Slides />
+        <Factions />
     </div>
   );
 }

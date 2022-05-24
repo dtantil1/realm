@@ -3,8 +3,8 @@ import './Signup.css'
 function Signup(){
     return(
         <Container className="register p-3"  >
-        <h3 className="text-center" id="register">Join Beta Program</h3>
-            <p className="text-center">Help make the next release of Trainers of the Realm and
+        <h3 className="text-center" id="register">Join Beta Software Program</h3>
+            <p className="text-center">Help test the next release of Trainers of the Realm and
                 receive an exclusive invitation to play</p>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
