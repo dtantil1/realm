@@ -7,8 +7,10 @@ import {Container} from "react-bootstrap";
 import { useState } from 'react';
 
 function App() {
-    let [title, setTitle] = useState(["Crush your enemies"]);
-    let [info, setInfo] = useState(["Get in shape"]);
+    const message = "<p>The more you work out, the tougher you and your warrior become."
+
+    let [title, setTitle] = useState(["Train. Get in Shape. Level up."]);
+    let [info, setInfo] = useState([message]);
     let [story, setStory] = useState([""]);
 
     const handleClick=(event)=>{
@@ -16,7 +18,7 @@ function App() {
         if(event.target.id ==="about"){
             setTitle("ABOUT")
             setInfo("Created by @dantan")
-            setStory("Story by @Juampi")
+            setStory("Story by @juampi")
         }
         if(event.target.id ==="home"){
             setTitle("Crush your enemies")
@@ -41,7 +43,8 @@ function App() {
         <Container fluid className="text-center hero">
             <div className="p-6">
             <h2>{title}</h2>
-            <h4>{info}</h4><h4>{story}</h4>
+                <div dangerouslySetInnerHTML={{ __html: info }}></div><p>{story}</p>
+
             </div>
         </Container>
         <Signup  />

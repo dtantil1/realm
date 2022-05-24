@@ -38,7 +38,7 @@ function Slides (){
 
                 <Carousel.Caption>
                     <h3>TRAIN</h3>
-                    <p>The more you workout, the tougher your warrior becomes</p>
+                    <p>The more you work out, the tougher you and your warrior become</p>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
