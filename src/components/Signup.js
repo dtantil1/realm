@@ -2,12 +2,10 @@ import {Container, Form, Button} from "react-bootstrap";
 import './Signup.css'
 function Signup(){
     return(
-        <Container className="register p-3">
-
+        <Container className="register p-3" id="register">
         <h3 className="text-center">Join Beta Program</h3>
             <p className="text-center">Help make the next release of Trainers of the Realm and
                 receive an exclusive invitation to play</p>
-
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
