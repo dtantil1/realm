@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <header><span id="top"></span>
+      <header><span id="about"></span><span id="lore"></span><span id="home"></span>
       <Navigation display={handleClick} />
       </header>
         <Container fluid className="text-center hero">
