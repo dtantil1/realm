@@ -9,20 +9,24 @@ import { useState } from 'react';
 function App() {
     let [title, setTitle] = useState(["Crush your enemies"]);
     let [info, setInfo] = useState(["Get in shape"]);
+    let [story, setStory] = useState([""]);
 
     const handleClick=(event)=>{
         console.log(event.target.id)
         if(event.target.id ==="about"){
             setTitle("ABOUT")
             setInfo("Created by @dantan")
+            setStory("Story by @Juampi")
         }
         if(event.target.id ==="home"){
             setTitle("Crush your enemies")
             setInfo("Get in shape")
+            setStory("")
         }
         if(event.target.id ==="lore"){
             setTitle("Trainers of the Realm")
             setInfo("It was a dark and stormy night...")
+            setStory("")
         }
 
 
@@ -37,7 +41,7 @@ function App() {
         <Container fluid className="text-center hero">
             <div className="p-6">
             <h2>{title}</h2>
-            <h4>{info}</h4>
+            <h4>{info}</h4><h4>{story}</h4>
             </div>
         </Container>
         <Signup  />
