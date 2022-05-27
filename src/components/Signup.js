@@ -15,7 +15,7 @@ function Signup(){
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(new_data)
         };
-        const response = await fetch('http://localhost:8000/api/registers/', requestOptions);
+        const response = await fetch('https://trainer-realms.herokuapp.com/api/registers/', requestOptions);
         const data = await response.json();
         console.log(data)
     }
