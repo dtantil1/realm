@@ -25,7 +25,7 @@ function Signup(){
         setFirstName(event.target[0].value)
         setLastName(event.target[1].value)
         setEmail(event.target[2].value)
-        let selected_sports = []
+        let selected_sports = ['no preference']
         for(let i=3; i < event.target.length; i++){
             if(event.target[i].checked)
                 selected_sports.push(event.target[i].value)
