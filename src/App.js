@@ -19,8 +19,12 @@ function App() {
         console.log(event.target.id)
         if(event.target.id ==="about"){
             setTitle("About")
-            setInfo("Created by @dantan")
-            setStory("Story by @juampi")
+            setInfo(" Trainers of the Realm is a game where you work out to level up your " +
+                "character. Run to improve endurance, lift to improve strength, excercise to defeat in-game rivals. " +
+                "<br> Using geolocation, you can interact with your neighborhood to encounter countless enemies " +
+                "and progress" +
+                " the story. <br><br> ")
+            setStory("Created by @dantan, story by @juanpi")
         }
         if(event.target.id ==="home"){
             setTitle(title_message)
