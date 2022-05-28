@@ -5,11 +5,11 @@ import TypeAnimation from 'react-type-animation';
 
 const steps = [
 
-    'Level up your warrior ⚔️', 2000,
-    'Level up your stamina by running 🏃', 2000,
-    'Level up your strength by lifting 🏋️‍', 2000,
-    'Level up yours stats by exercising 🚴', 2000,
-    'Level up yourself...', 2000,
+    'Level up your warrior ⚔️', 3000,
+    'Level up your stamina by running 🏃', 3000,
+    'Level up your strength by lifting 🏋️‍', 3000,
+    'Level up yours stats by exercising 🚴', 3000,
+    'Level up yourself...', 5000,
     'Conquer the Realm...🏰'
 ];
 
