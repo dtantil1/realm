@@ -6,9 +6,10 @@ import TypeAnimation from 'react-type-animation';
 const steps = [
 
     'Level up your warrior ⚔️', 2000,
-    'Level up yourself 🧍', 2000,
-    'Run for stamina', 3000,
-    'Lift for strength', 3000,
+    'Level up your stamina by running', 2000,
+    'Level up your strength by lifting', 2000,
+    'Level up yours stats by exercising', 2000,
+    'Level up yourself...', 2000,
     'Conquer the Realm...'
 ];
 
