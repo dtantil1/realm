@@ -4,13 +4,14 @@ import Slides from "./components/Slides";
 import Signup from "./components/Signup";
 import Navigation from "./components/Navigation";
 import Welcome from "./components/Welcome";
+import Typemove from "./components/Typemove";
 // import Factions from "./components/Factions";
 import About from "./components/About"
 import {Container} from "react-bootstrap";
 import { useState } from 'react';
 
 function App() {
-    const message = "<p>Level-up your warrior...and yourself.<br><strong>Conquer the Realm.</strong></p>"
+    const message = "<p>The only game that makes you better the more your workout<br></p>"
     const title_message = "<strong>Trainers of the Realm</strong>"
 
     let [title, setTitle] = useState([title_message]);
@@ -42,7 +43,8 @@ function App() {
             <h2 className="navigation"><div dangerouslySetInnerHTML={{ __html: title }}></div></h2>
                 <div dangerouslySetInnerHTML={{ __html: info }}></div><p>{story}</p>
             </div>
-        <Welcome />
+            <Typemove />
+
         </Container>
         <Signup  />
         <Slides />
