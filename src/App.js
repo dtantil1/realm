@@ -4,6 +4,7 @@ import Slides from "./components/Slides";
 import Signup from "./components/Signup";
 import Navigation from "./components/Navigation";
 import Factions from "./components/Factions";
+import About from "./components/About"
 import {Container} from "react-bootstrap";
 import { useState } from 'react';
 
@@ -17,15 +18,6 @@ function App() {
 
     const handleClick=(event)=>{
         console.log(event.target.id)
-        if(event.target.id ==="about"){
-            setTitle("About")
-            setInfo(" Trainers of the Realm is a game where you work out to level up your " +
-                "character. Run to improve endurance, lift to improve strength, excercise to defeat in-game rivals. " +
-                "<br> Using geolocation, you can interact with your neighborhood to encounter countless enemies " +
-                "and progress" +
-                " the story. <br><br> ")
-            setStory("Created by @dantan, story by @juanpi")
-        }
         if(event.target.id ==="home"){
             setTitle(title_message)
             setInfo(message)
@@ -40,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <header><span id="about"></span><span id="lore"></span><span id="home"></span>
+      <header><span id="lore" /><span id="home" />
       <Navigation display={handleClick} />
       </header>
         <Container fluid className="text-center hero">
@@ -51,7 +43,8 @@ function App() {
         </Container>
         <Signup  />
         <Slides />
-        <Factions />
+
+        <About />
     </div>
   );
 }

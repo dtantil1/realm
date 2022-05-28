@@ -1,0 +1,8 @@
+.knight{
+    position: relative;
+    background-image: url("../images/castleknight.png");
+    background-size: cover;
+    height: 150vh;
+    width: 99%;
+}
+
