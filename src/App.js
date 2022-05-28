@@ -33,6 +33,7 @@ function App() {
   return (
     <div className="App">
       <header><span id="lore" /><span id="home" />
+
       <Navigation display={handleClick} />
       </header>
         <Container fluid className="text-center hero">

@@ -12,7 +12,7 @@ function Navigation(props){
                             <Nav.Link href="#home" id="home" onClick={props.display}>Home</Nav.Link>
                             <Nav.Link href="#lore" id="lore" onClick={props.display}>Lore</Nav.Link>
                             <Nav.Link href="#factions" onClick={props.display}>Factions</Nav.Link>
-                            <Nav.Link href="#about" id="about" onClick={props.display}>About</Nav.Link>
+                            <Nav.Link href="#about" onClick={props.display}>About</Nav.Link>
                         </Nav>
                         <Nav>
                             <Nav.Link href="#register">Register</Nav.Link>
