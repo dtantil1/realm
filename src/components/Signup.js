@@ -98,7 +98,7 @@ function Signup(){
                 </Button>
                 </ParticleEffectButton>
                 <Container hidden={!disable} className="text-center text-info">
-                    <p> Welcome <br /> You chose wisely...<strong> {firstName} {lastName} </strong> </p>
+                    <p> <strong>{firstName} {lastName}</strong><br />You chose wisely... </p>
                 </Container>
             </Form>
         </Container>
