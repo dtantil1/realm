@@ -10,7 +10,7 @@ const steps = [
     'Level up your strength by lifting 🏋️‍', 3000,
     'Level up yours stats by exercising 🚴', 3000,
     'Level up yourself...', 5000,
-    'Conquer the Realm...🏰'
+    'Conquer the Realm...'
 ];
 
 
