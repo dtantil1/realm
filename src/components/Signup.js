@@ -55,7 +55,7 @@ function Signup(){
             email: event.target[2].value,
             workouts: selected_sports.toString()
         }
-        //uploadData(data)
+        uploadData(data)
         setDisable(true)
     }
 
