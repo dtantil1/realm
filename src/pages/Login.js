@@ -16,12 +16,13 @@ function Login(){
             password:password
         }
 
-        await fetch(LOGIN_URL, {
+        const response = await fetch(LOGIN_URL, {
             method: 'POST',
             headers:{'Content-Type':'application/json'},
             credentials: 'include',
             body:JSON.stringify(data)
         });
+        const content = await response.json();
         setRedirect(true)
     }
     if (redirect) {
