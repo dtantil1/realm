@@ -26,7 +26,8 @@ function Login(){
             body:JSON.stringify(data)
         });
         console.log("From login: ")
-        console.log(response)
+
+        console.log(document.cookie)
         setRedirect(true)
     }
     if (redirect) {
