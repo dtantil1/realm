@@ -1,4 +1,6 @@
 import {useEffect, useState} from "react";
+const USER_URL = 'https://trainer-realms.herokuapp.com/api/user'
+
 
 function Home(){
 
@@ -7,7 +9,7 @@ function Home(){
     useEffect( ()=>{
         (
             async () =>{
-                const response = await fetch('http://127.0.0.1:8000/api/user', {
+                const response = await fetch(USER_URL, {
                     method:'GET',
                     credentials: 'include',
                     headers:{'Content-Type':'application/json'},

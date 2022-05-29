@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {Navigate} from "react-router-dom";
-
+const REGISTER_URL = 'https://trainer-realms.herokuapp.com/api/register'
 
 function Register(){
     const [name, setName] = useState('');
@@ -17,7 +17,7 @@ function Register(){
             password:password
         }
 
-        const response = await fetch('http://127.0.0.1:8000/api/register', {
+        const response = await fetch(REGISTER_URL, {
             method: 'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify(data)

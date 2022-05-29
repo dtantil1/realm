@@ -1,7 +1,7 @@
 import './Login.css'
 import {useState} from "react";
 import {Navigate} from "react-router-dom";
-
+const LOGIN_URL = 'https://trainer-realms.herokuapp.com/api/login'
 
 function Login(){
 
@@ -16,7 +16,7 @@ function Login(){
             password:password
         }
 
-        await fetch('http://127.0.0.1:8000/api/login', {
+        await fetch(LOGIN_URL, {
             method: 'POST',
             headers:{'Content-Type':'application/json'},
             credentials: 'include',
