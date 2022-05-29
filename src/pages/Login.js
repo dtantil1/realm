@@ -3,6 +3,9 @@ import {useState} from "react";
 import {Navigate} from "react-router-dom";
 const LOGIN_URL = 'https://trainer-realms.herokuapp.com/api/login'
 
+//const LOGIN_URL='http://127.0.0.1:8000/api/login'
+
+
 function Login(){
 
     const [email, setEmail] = useState('');
@@ -13,16 +16,17 @@ function Login(){
         e.preventDefault();
         let data = {
             email: email,
-            password:password
+            password: password
         }
 
         const response = await fetch(LOGIN_URL, {
             method: 'POST',
-            headers:{'Content-Type':'application/json'},
             credentials: 'include',
+            headers:{'Content-Type':'application/json'},
             body:JSON.stringify(data)
         });
-        const content = await response.json();
+        console.log("From login: ")
+        console.log(response)
         setRedirect(true)
     }
     if (redirect) {
