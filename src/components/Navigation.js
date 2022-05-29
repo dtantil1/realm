@@ -1,21 +1,26 @@
-import {Container, Navbar, Nav} from "react-bootstrap";
-function Navigation(props){
+import {Container, Navbar, Nav,} from "react-bootstrap";
+import {Link} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
+import {useState} from "react";
 
+
+
+function Navigation(props){
+    const [expanded, setExpanded] = useState(false);
     return(
         <div>
-            <Navbar className="navigation" collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
+            <Navbar className="navigation" expanded={expanded} collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
                 <Container>
-                    <Navbar.Brand href="#top" id="home" onClick={props.display}>Trainers of the Realm</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Link to="/" className="navbar-brand">Realms</Link>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")}/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#home" id="home" onClick={props.display}>Home</Nav.Link>
-                            <Nav.Link href="#lore" id="lore" onClick={props.display}>Lore</Nav.Link>
-                            {/*<Nav.Link href="#factions" onClick={props.display}>Factions</Nav.Link>*/}
-                            <Nav.Link href="#about" onClick={props.display}>About</Nav.Link>
+                            <HashLink to="/#home" className="nav-link" onClick={() => setExpanded(false)}>Home</HashLink>
+                            <HashLink to="/#about" className="nav-link" onClick={() => setExpanded(false)}>About</HashLink>
                         </Nav>
                         <Nav>
-                            <Nav.Link href="#register">Register</Nav.Link>
+                            <Link to="/register" className="nav-link" onClick={() => setExpanded(false)}>Register</Link>
+                            <Link to="/login" className="nav-link" onClick={() => setExpanded(false)}>Login</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

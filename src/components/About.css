@@ -4,10 +4,10 @@
     background-size: cover;
     height: 70vh;
     width: 99%;
+    color:whitesmoke;
 }
 
 @media (min-width: 1200px) {
-    p {font-size:1.5rem;}
-    h2 {font-size:3rem;}
+
 }
 

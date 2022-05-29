@@ -1,7 +1,7 @@
-import React, {Component, Fragment} from 'react'
+import React, {Fragment} from 'react'
 import Typical from 'react-typical'
+import Login from "../pages/Login";
 
-import TypeAnimation from 'react-type-animation';
 
 const steps = [
 
@@ -18,7 +18,7 @@ class Typemove extends React.Component {
     render () {
         return (
             <Fragment>
-            <Typical wrapper="p" steps={steps} loop={1}  />
+            <h2><span className="text-white" ><Typical wrapper="p" steps={steps} loop={1}  /></span></h2>
             </Fragment>
         )
     }

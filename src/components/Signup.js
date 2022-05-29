@@ -3,24 +3,13 @@ import './Signup.css'
 import { useState } from 'react';
 import ParticleEffectButton from 'react-particle-effect-button'
 
-function sleep(milliseconds) {
-    const date = Date.now();
-    let currentDate = null;
-    do {
-        currentDate = Date.now();
-    } while (currentDate - date < milliseconds);
-}
-
 
 function Signup(){
     let [firstName, setFirstName] = useState('');
     let [lastName, setLastName] = useState('');
-    let [email, setEmail] = useState('');
-    let [sports, setSports] = useState([]);
     const [disable, setDisable] = useState(false);
     let [state, setState] = useState(false);
 
-    const [test, setTest] = useState('');
 
     async function uploadData(new_data) {
         // POST request using fetch with async/await
@@ -38,17 +27,14 @@ function Signup(){
         event.preventDefault();
         setState(true)
 
-        setTest('disable')
-
         setFirstName(event.target[0].value)
         setLastName(event.target[1].value)
-        setEmail(event.target[2].value)
-        let selected_sports = ['no preference']
+        let selected_sports = ['']
         for(let i=3; i < event.target.length; i++){
             if(event.target[i].checked)
                 selected_sports.push(event.target[i].value)
         }
-        setSports(selected_sports)
+
         let data = {
             first_name: event.target[0].value,
             last_name: event.target[1].value,
@@ -59,44 +45,40 @@ function Signup(){
         setDisable(true)
     }
 
-    const listItems = sports.map((sport) =>
-        <li>{sport}</li>
-    );
-
-
     return(
         <Container className="register p-3"  >
         <h3 className="text-center" id="register">Join Beta Software Program</h3>
             <p className="text-center " hidden={disable}>Help test the next release of Trainers of the Realm and
                 receive an exclusive invitation to play</p>
             <Form onSubmit={handleSubmit}>
-                <Form.Group className="mb-3" controlId="formBasicFirstName" >
+                <Form.Group className="" controlId="formBasicFirstName" >
                     <Form.Label>First Name</Form.Label>
                     <Form.Control type="text" placeholder="John" disabled={disable} required/>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicLastName" >
+                <Form.Group className="mb-1" controlId="formBasicLastName" >
                     <Form.Label>Last Name</Form.Label>
                     <Form.Control type="text" placeholder="Doe" disabled={disable} required/>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail" >
+                <Form.Group className="mb-1" controlId="formBasicEmail" >
                     <Form.Label>Email address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" disabled={disable} required/>
                     <Form.Text className="text-muted">
                         Your email will be your username
                     </Form.Text>
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox" >
+                <Form.Group className="mb-1" controlId="formBasicCheckbox" >
                     <Form.Label>Preferred Workouts</Form.Label>
                     <Form.Check type="checkbox" value="running" label="Running" disabled={disable} />
                     <Form.Check type="checkbox" value="cycling" label="Cycling"disabled={disable} />
                     <Form.Check type="checkbox" value="weightlifting" label="Weightlifting" disabled={disable} />
                     <Form.Check type="checkbox" value="other" label="Other" disabled={disable}/>
                 </Form.Group >
+                <Form.Group className={"text-center"}>
                 <ParticleEffectButton color='#402959' hidden={state}>
                 <Button variant="primary" type="submit" >
                     Submit
                 </Button>
-                </ParticleEffectButton>
+                </ParticleEffectButton></Form.Group>
                 <Container hidden={!disable} className="text-center text-info">
                     <p> <strong>{firstName} {lastName}</strong><br />You chose wisely... </p>
                 </Container>

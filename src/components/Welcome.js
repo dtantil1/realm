@@ -8,18 +8,16 @@ function Welcome (){
     let [state, setState] = useState(false);
 
     function handleClick (event){
-        console.log("before click " + state)
         setState(true)
-        console.log("boom click " + state)
     }
         return (
 
 
             <ParticleEffectButton
-                color='#402959'
+                color='#f24602'
                 hidden={state}
             >
-               <button className={"btn-primary"} onClick={handleClick}>BOOM</button>
+               <button className="btn btn-dark btn-block" onClick={handleClick}>Boom</button>
             </ParticleEffectButton>
         )
 }
